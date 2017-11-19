@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CRUD</string>
+    <string name="listado_de_alumnos">Listado de Alumnos</string>
+    <string name="agregar_alumno">Agregar Alumno</string>
+    <string name="nombre">Nombre</string>
+    <string name="codigo_de_alumno">Codigo de alumno</string>
+    <string name="genero">Genero</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="nombre_del_alumno">NOMBRE DEL ALUMNO</string>
+    <string name="codigo">CODIGO</string>
 </resources>

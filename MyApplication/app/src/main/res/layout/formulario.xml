@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:id="@+id/txtNombre"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:ems="10"
+        android:hint="@string/codigo_de_alumno"
+        android:id="@+id/txtCodigo"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/genero"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_gravity="center"/>
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/form_genero"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/masculino"
+            android:checked="true"
+            android:id="@+id/form_genero_m"/>
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/femenino"
+            android:id="@+id/form_genero_f"/>
+    </RadioGroup>
+
+</LinearLayout>
+

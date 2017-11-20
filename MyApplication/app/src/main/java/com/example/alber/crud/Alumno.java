@@ -9,17 +9,23 @@ public class Alumno {
     private int genero;
     private String codigo;
 
-    public Alumno (String nombre, int genero, String codigo)
+    public Alumno()
     {
-        this.nombre = nombre;
-        this.genero = genero;
-        this.codigo = codigo;
+
     }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public Alumno (String n, int g, String c)
+    {
+        this.nombre = n;
+        this.genero = g;
+        this.codigo = c;
+    }
+    public void setNombre(String n) { this.nombre = n; }
     public String getNombre() { return nombre; }
-    public void setGenero(int genero) { this.genero = genero; }
+
+    public void setGenero(int g) { this.genero = g; }
     public int getGenero() { return genero; }
-    public void setCodigo(String codigo) { this.codigo = codigo; }
+
+    public void setCodigo(String c) { this.codigo = c; }
     public String getCodigo() { return codigo; }
 }
 

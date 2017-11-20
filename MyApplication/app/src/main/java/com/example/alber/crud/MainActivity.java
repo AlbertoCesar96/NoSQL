@@ -20,6 +20,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
+=======
+        // setup firebase
+>>>>>>> 68a0cfe55b004e7bd38f9874474137131fd64c27
         try{
             Firebase.getDefaultConfig().setPersistenceEnabled(true);
         }catch(Exception e){}

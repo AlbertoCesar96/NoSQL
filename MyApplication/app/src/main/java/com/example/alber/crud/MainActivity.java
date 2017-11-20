@@ -93,7 +93,9 @@ public class MainActivity extends Activity {
             codigo.setText(inputalumno.getCodigo());
             genero.check(inputalumno.getGenero());
             initialTitle="Actualización";
-        }else{
+        }else {
+            initialTitle="Agregar";
+        }
             AlertDialog.Builder dlg = new AlertDialog.Builder(this);
             dlg.setTitle(initialTitle+" Alumnos");
             dlg.setView(v);
@@ -101,7 +103,7 @@ public class MainActivity extends Activity {
                 @Override
                 public void onClick(DialogInterface p1, int p2) {
                     if(nombre.getText().toString().length()<2||codigo.getText().toString().length()<2){
-                        Toast.makeText(MainActivity.this, "Data tidak valid", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Datos invalidos", Toast.LENGTH_LONG).show();
                         return;
                     }
 
@@ -112,7 +114,7 @@ public class MainActivity extends Activity {
                         mFirebase.child(keyArray.get(pos)).setValue(alumno);
                     }
 
-                    Toast.makeText(MainActivity.this,"Qchucha va aca"+(initialTitle.toLowerCase()), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Usuario exitoso"+(initialTitle.toLowerCase()), Toast.LENGTH_SHORT).show();
                 }
             });
             if (inputalumno!=null){
@@ -127,7 +129,7 @@ public class MainActivity extends Activity {
             dlg.show();
         }
 
-    }
+
     @Override
     protected void onDestroy() {
         mFirebase = null;

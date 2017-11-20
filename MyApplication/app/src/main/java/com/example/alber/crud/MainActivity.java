@@ -19,12 +19,13 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        //CONFIGURACION DE FIREBASE
         super.onCreate(savedInstanceState);
         try{
             Firebase.getDefaultConfig().setPersistenceEnabled(true);
         }catch(Exception e){}
         Firebase.setAndroidContext(this);
-        mFirebase = new Firebase("https://crud-fdf06.firebaseio.com/").child("user");
+        mFirebase = new Firebase("https://crud-fdf06.firebaseio.com/").child("user"); //URL DE LA BASE DE DATOS EN FIREBASE
         setContentView(R.layout.activity_main);
         list=(ListView) findViewById(R.id.listado);
         addbtn=(Button) findViewById(R.id.btnagregar);
@@ -43,7 +44,7 @@ public class MainActivity extends Activity {
                 formulario((Alumno) p1.getItemAtPosition(itempos), itempos);
             }
         });
-        // firebase data listener
+        // LISTENER DE FIREBASE
         mFirebase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -78,6 +79,7 @@ public class MainActivity extends Activity {
             }
         });
     }
+    //FORMULARIO FLOTANTE
     private void formulario(final Alumno inputuser, final int pos){
         View v = LayoutInflater.from(this).inflate(R.layout.formulario, null);
         final EditText nama = (EditText) v.findViewById(R.id.txtNombre);

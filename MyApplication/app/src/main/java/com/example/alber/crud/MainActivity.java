@@ -20,14 +20,11 @@ public class MainActivity extends Activity {
     ArrayList<Alumno> alumnos;
     String initialTitle;
     List<String> keyArray = new ArrayList<String>();
-
     Firebase mFirebase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         try{
             Firebase.getDefaultConfig().setPersistenceEnabled(true);
         }catch(Exception e){}

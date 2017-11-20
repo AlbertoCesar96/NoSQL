@@ -33,7 +33,6 @@
         android:text="@string/genero"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_gravity="center"/>
-
     <RadioGroup
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"

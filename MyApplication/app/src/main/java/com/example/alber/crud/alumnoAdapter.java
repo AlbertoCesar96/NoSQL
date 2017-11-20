@@ -19,7 +19,7 @@ import java.util.HashMap;
 public class alumnoAdapter extends ArrayAdapter<Alumno> {
     HashMap<Integer, Drawable> gender_icon;
     public alumnoAdapter(Context ctx, ArrayList<Alumno> alumnos){
-        super(ctx, 0, alumnos)
+        super(ctx, 0, alumnos);
         gender_icon=new HashMap<Integer, Drawable>();
         gender_icon.put(R.id.form_genero_f, ctx.getDrawable(R.drawable.human_female));
         gender_icon.put(R.id.form_genero_m, ctx.getDrawable(R.drawable.human_male));

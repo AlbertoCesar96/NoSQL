@@ -87,18 +87,18 @@ public class MainActivity extends Activity {
             nama.setText(inputuser.getNombre());
             alamat.setText(inputuser.getCodigo());
             gender.check(inputuser.getGenero());
-            initialTitle="Perbarui";
+            initialTitle="Actualización";
         }else{
-            initialTitle="Tambahkan";
+            initialTitle="Agregar";
         }
         AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-        dlg.setTitle(initialTitle+" Pengguna");
+        dlg.setTitle(initialTitle+" Usuarios");
         dlg.setView(v);
         dlg.setPositiveButton(initialTitle, new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface p1, int p2) {
                 if(nama.getText().toString().length()<2||alamat.getText().toString().length()<2){
-                    Toast.makeText(MainActivity.this, "Data tidak valid", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Datos invalidos", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -109,18 +109,18 @@ public class MainActivity extends Activity {
                     mFirebase.child(keyArray.get(pos)).setValue(user);
                 }
 
-                Toast.makeText(MainActivity.this, "Pengguna berhasil di"+(initialTitle.toLowerCase()), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "El alumno se agrego correctamente", Toast.LENGTH_SHORT).show();
             }
         });
         if(inputuser!=null){
-            dlg.setNeutralButton("Hapus", new DialogInterface.OnClickListener(){
+            dlg.setNeutralButton("Eliminar", new DialogInterface.OnClickListener(){
                 @Override
                 public void onClick(DialogInterface p1, int p2) {
                     mFirebase.child(keyArray.get(pos)).removeValue();
                 }
             });
         }
-        dlg.setNegativeButton("Batal", null);
+        dlg.setNegativeButton("Cancelar", null);
         dlg.show();
     }
 

@@ -2,7 +2,6 @@ package com.example.alber.crud;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +19,10 @@ import java.util.HashMap;
 public class alumnoAdapter extends ArrayAdapter<Alumno> {
     HashMap<Integer, Drawable> gender_icon;
     public alumnoAdapter(Context ctx, ArrayList<Alumno> alumnos){
-        super(ctx, 0, alumnos);
+        super(ctx, 0, alumnos)
         gender_icon=new HashMap<Integer, Drawable>();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            gender_icon.put(R.id.form_genero_f, ctx.getDrawable(R.drawable.human_female));
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            gender_icon.put(R.id.form_genero_m, ctx.getDrawable(R.drawable.human_male));
-        }
+        gender_icon.put(R.id.form_genero_f, ctx.getDrawable(R.drawable.human_female));
+        gender_icon.put(R.id.form_genero_m, ctx.getDrawable(R.drawable.human_male));
     }
     public static class ViewHolder{
         TextView nombre;

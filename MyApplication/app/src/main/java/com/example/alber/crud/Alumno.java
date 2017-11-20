@@ -17,8 +17,10 @@ public class Alumno {
     }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public String getNombre() { return nombre; }
+
     public void setGenero(int genero) { this.genero = genero; }
     public int getGenero() { return genero; }
+
     public void setCodigo(String codigo) { this.codigo = codigo; }
     public String getCodigo() { return codigo; }
 }
